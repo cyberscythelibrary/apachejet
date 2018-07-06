@@ -6,11 +6,13 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojinputtext', 'ojs/ojlabel','ojs/ojbutton'],
  function(oj, ko, $) {
   
     function DashboardViewModel() {
       var self = this;
+      
+      self.name = ko.observable();
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
@@ -40,6 +42,10 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
       self.transitionCompleted = function() {
         // Implement if needed
       };
+      
+      self.submit = function(){
+        alert('Name entered is  ' + self.name());
+    }
     }
 
     /*

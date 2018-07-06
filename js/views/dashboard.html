@@ -4,7 +4,14 @@
  -->
 <div class="oj-hybrid-padding">
   <h1>Dashboard Content Area</h1>
+  
   <div>
       To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
   </div>
+  <div>
+      <oj-label for="text-input">Name</oj-label>
+          <oj-input-text id="text-input" value="{{name}}"></oj-input-text>
+           <oj-button id='button1' on-oj-action='[[submit]]'>Submit</oj-button>
+  </div>
+  
 </div>
