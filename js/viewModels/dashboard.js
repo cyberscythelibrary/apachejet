@@ -6,7 +6,7 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojinputtext', 'ojs/ojlabel','ojs/ojbutton'],
+define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojinputtext', 'ojs/ojlabel','ojs/ojbutton','ojs/ojdialog','ojs/ojmessages', 'ojs/ojmessage'],
  function(oj, ko, $) {
   
     function DashboardViewModel() {
@@ -47,7 +47,6 @@ define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojinputtext', 'ojs/ojlabel','ojs
         alert('Name entered is  ' + self.name());
     }
     }
-
     /*
      * Returns a constructor for the ViewModel so that the ViewModel is constructed
      * each time the view is displayed.  Return an instance of the ViewModel if

@@ -5,13 +5,55 @@
 <div class="oj-hybrid-padding">
   <h1>Dashboard Content Area</h1>
   
-  <div>
+<!--  <div>
       To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
-  </div>
+  </div>-->
   <div>
       <oj-label for="text-input">Name</oj-label>
-          <oj-input-text id="text-input" value="{{name}}"></oj-input-text>
-           <oj-button id='button1' on-oj-action='[[submit]]'>Submit</oj-button>
+      <oj-input-text id="text-input" value="{{name}}"></oj-input-text>
+      <!--<oj-button id='button1' on-oj-action='[[submit]]'>Submit</oj-button>-->
+              <div id="dialogWrapper">
+          <oj-dialog style="display:none" id="modalDialog1" title="Saying Hello.">
+            <div slot="body">
+               <!--<oj-input-text id="text-input-read" value="{{name}}"></oj-input-text>-->
+              Hello <span data-bind="text: name">
+               </span> !
+               
+            </div>
+            <div slot="footer">
+              <oj-button id="okButton" data-bind="click: function() {
+                  document.querySelector('#modalDialog1').close();
+                }">  OK
+              </oj-button>
+            </div>
+          </oj-dialog>
+          <oj-button id="buttonOpener"  
+            data-bind="click: function() {
+              document.querySelector('#modalDialog1').open();
+            }">
+            Say Hello !
+          </oj-button>
+        </div>
+      
   </div>
-  
+<!-- Page -->
+<!--        
+        <div id="inlineMessages">
+           Messages 
+          <oj-messages>
+            <oj-message message='{"severity": "error", "summary": "Error message summary", 
+                                  "detail": "Error message detail"}'>
+            </oj-message>
+            <oj-message message='{"severity": "warning", "summary": "Warning message summary", 
+                                  "detail": "Warning message detail"}'>
+            </oj-message>
+            <oj-message message='{"severity": "confirmation", "summary": "Confirmation message summary", 
+                                  "detail": "Confirmation message detail"}'>
+            </oj-message>
+            <oj-message message='{"severity": "info", "summary": "Info message summary", 
+                                  "detail": "Info message detail"}'>
+            </oj-message>
+          </oj-messages>
+        </div>
+-->
 </div>
