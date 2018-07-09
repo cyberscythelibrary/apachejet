@@ -6,12 +6,27 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojinputtext', 'ojs/ojlabel','ojs/ojbutton','ojs/ojdialog','ojs/ojmessages', 'ojs/ojmessage'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout',  'ojs/ojinputnumber','ojs/ojchart', 'ojs/ojselectcombobox','ojs/ojinputtext', 'ojs/ojlabel','ojs/ojbutton','ojs/ojdialog','ojs/ojmessages', 'ojs/ojmessage'],
  function(oj, ko, $) {
   
     function DashboardViewModel() {
       var self = this;
       
+       var self = this;
+        self.innerRadius = ko.observable(0.5);
+        self.centerLabel = ko.observable('Customer Order');
+        self.labelStyle = ko.observable('font-size:20px;color:#999999;');
+
+        /* chart data */
+        var pieSeries = [{name: "Order Placed", items: [42]},
+                         {name: "Design", items: [55]},
+                         {name: "Development", items: [36]},
+                         {name: "Packaging & Distribution", items: [22]},
+                         {name: "Feedback & Completion", items: [22]}];
+        var pieGroups = ["Group A"];
+        this.pieSeriesValue = ko.observableArray(pieSeries);
+        this.pieGroupsValue = ko.observableArray(pieGroups);
+        
       self.name = ko.observable();
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.

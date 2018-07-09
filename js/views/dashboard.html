@@ -9,6 +9,19 @@
       To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
   </div>-->
   <div>
+         <div id="pieChart"  data-bind="ojComponent: {
+        component: 'ojChart',
+        type: 'pie',
+        series: pieSeriesValue,
+        groups: pieGroupsValue,
+        styleDefaults: {pieInnerRadius: ko.toJS(innerRadius)},
+        animationOnDataChange: 'auto',
+        pieCenter: {
+          label: ko.toJS(centerLabel),
+          labelStyle: ko.toJS(labelStyle)}
+        }"
+        style="max-width:1000px;width:100%;height:700px;">
+   </div>      
       <oj-label for="text-input">Name</oj-label>
       <oj-input-text id="text-input" value="{{name}}"></oj-input-text>
       <!--<oj-button id='button1' on-oj-action='[[submit]]'>Submit</oj-button>-->
