@@ -11,8 +11,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout',  'ojs/ojinputnumbe
   
     function DashboardViewModel() {
       var self = this;
-      
-       var self = this;
         self.innerRadius = ko.observable(0.5);
         self.centerLabel = ko.observable('Customer Order');
         self.labelStyle = ko.observable('font-size:20px;color:#999999;');
@@ -28,6 +26,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout',  'ojs/ojinputnumbe
         this.pieGroupsValue = ko.observableArray(pieGroups);
         
       self.name = ko.observable();
+      
+
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
