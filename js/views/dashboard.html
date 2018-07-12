@@ -1,72 +1,75 @@
 <!--
  Copyright (c) 2014, 2018, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
- -->
+-->
 <div class="oj-hybrid-padding">
-  <h1>Dashboard Content Area</h1>
-  
-<!--  <div>
-      To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
-  </div>-->
-  <div>
-         <div id="pieChart"  data-bind="ojComponent: {
+    <h1>Dashboard Content Area</h1>
+
+    <!--  <div>
+          To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
+      </div>-->
+    <div>
+
+        <div id="pieChart" data-bind="ojComponent: {
         component: 'ojChart',
         type: 'pie',
         series: pieSeriesValue,
         groups: pieGroupsValue,
         styleDefaults: {pieInnerRadius: ko.toJS(innerRadius)},
         animationOnDataChange: 'auto',
+        legend: { rendered : ko.toJS(pieRender) },
         pieCenter: {
           label: ko.toJS(centerLabel),
           labelStyle: ko.toJS(labelStyle)}
         }"
-        style="max-width:1000px;width:100%;height:700px;">
-   </div>      
-      <oj-label for="text-input">Name</oj-label>
-      <oj-input-text id="text-input" value="{{name}}"></oj-input-text>
-      <!--<oj-button id='button1' on-oj-action='[[submit]]'>Submit</oj-button>-->
-              <div id="dialogWrapper">
-          <oj-dialog style="display:none" id="modalDialog1" title="Saying Hello.">
-            <div slot="body">
-               <!--<oj-input-text id="text-input-read" value="{{name}}"></oj-input-text>-->
-              Hello <span data-bind="text: name">
-               </span> !
-               
-            </div>
-            <div slot="footer">
-              <oj-button id="okButton" data-bind="click: function() {
+
+             style="max-width:1000px;width:100%;height:500px;">
+        </div>      
+        <!--<oj-label for="text-input">Name</oj-label>-->
+        <!--<oj-input-text id="text-input" value="{{name}}"></oj-input-text>-->
+
+<!--        <div id="dialogWrapper">
+            <oj-dialog style="display:none" id="modalDialog1" title="Saying Hello.">
+                <div slot="body">
+                    <oj-input-text id="text-input-read" value="{{name}}"></oj-input-text>
+                    Hello <span data-bind="text: name">
+                    </span> !
+
+                </div>
+                <div slot="footer">
+                    <oj-button id="okButton" data-bind="click: function() {
                   document.querySelector('#modalDialog1').close();
                 }">  OK
-              </oj-button>
-            </div>
-          </oj-dialog>
-          <oj-button id="buttonOpener"  
-            data-bind="click: function() {
+                    </oj-button>
+                </div>
+            </oj-dialog>
+            <oj-button id="buttonOpener"  
+                       data-bind="click: function() {
               document.querySelector('#modalDialog1').open();
             }">
-            Say Hello !
-          </oj-button>
-        </div>
-      
-  </div>
-<!-- Page -->
-<!--        
-        <div id="inlineMessages">
-           Messages 
-          <oj-messages>
-            <oj-message message='{"severity": "error", "summary": "Error message summary", 
-                                  "detail": "Error message detail"}'>
-            </oj-message>
-            <oj-message message='{"severity": "warning", "summary": "Warning message summary", 
-                                  "detail": "Warning message detail"}'>
-            </oj-message>
-            <oj-message message='{"severity": "confirmation", "summary": "Confirmation message summary", 
-                                  "detail": "Confirmation message detail"}'>
-            </oj-message>
-            <oj-message message='{"severity": "info", "summary": "Info message summary", 
-                                  "detail": "Info message detail"}'>
-            </oj-message>
-          </oj-messages>
-        </div>
--->
+                Say Hello !
+            </oj-button>
+        </div>-->
+
+    </div>
+    <!-- Page -->
+    <!--        
+            <div id="inlineMessages">
+               Messages 
+              <oj-messages>
+                <oj-message message='{"severity": "error", "summary": "Error message summary", 
+                                      "detail": "Error message detail"}'>
+                </oj-message>
+                <oj-message message='{"severity": "warning", "summary": "Warning message summary", 
+                                      "detail": "Warning message detail"}'>
+                </oj-message>
+                <oj-message message='{"severity": "confirmation", "summary": "Confirmation message summary", 
+                                      "detail": "Confirmation message detail"}'>
+                </oj-message>
+                <oj-message message='{"severity": "info", "summary": "Info message summary", 
+                                      "detail": "Info message detail"}'>
+                </oj-message>
+              </oj-messages>
+            </div>
+    -->
 </div>

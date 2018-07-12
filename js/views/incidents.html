@@ -1,41 +1,42 @@
 <!--
  Copyright (c) 2014, 2018, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
- -->
+-->
 <div class="oj-hybrid-padding">
-  <h1>Inventory</h1>
-  <div>
-<p>This section contains complete list of items in stock.</p>
+    <h1>Inventory</h1>
+    <div>
+        <p>This section contains complete list of items in stock.</p>
+        <oj-input-text id="filter" maxlength="30" placeholder="Type to filter" on-raw-value-changed="[[handleValueChanged]]" value="{{filter}}"></oj-input-text>
+        <oj-button id="clearButton"
+                   on-oj-action='[[clearClick]]'
+                   display='icons'
+                   chroming='half'>
+            <span slot='startIcon' class='oj-fwk-icon oj-fwk-icon-cross03'></span>
+            Clear
+        </oj-button>
         <oj-table id='table' aria-label='Departments Table'
-                                        data='[[dataprovider]]'
-                                        selection-mode='{"row": "multiple", "column": "multiple"}'
-                                        dnd='{"reorder": {"columns": "enabled"}}'
-                                        scroll-policy='loadMoreOnScroll'
-                                        scroll-policy-options='{"fetchSize": 10}'
-                                        columns='	[{"headerText": "Item Code", 
-	"field": "ItemCode",
-	"headerClassName": "oj-sm-only-hide",
-	"className": "oj-sm-only-hide",
-	"resizable": "enabled"},
-	{"headerText": "Item Description", 
-	"field": "ItemDescription",
-	"resizable": "enabled"},
-	{"headerText": "On Hand Quantity", 
-	"field": "OnHandValue",
-	"headerClassName": "oj-sm-only-hide",
-	"className": "oj-sm-only-hide",
-	"resizable": "enabled"},
-	{"headerText": "Unit Of Measure", 
-	"field": "UOM",
-	"resizable": "enabled"}]'
-                                        style='width: 100%; height: 400px;'>
+                  data='[[dataprovider]]'
+                  selection-mode='{"row": "multiple", "column": "multiple"}'
+                  dnd='{"reorder": {"columns": "enabled"}}'
+                  scroll-policy='loadMoreOnScroll'
+                  scroll-policy-options='{"fetchSize": 10}'
+                  columns='	[{"headerText": "Item Code", 
+                  "field": "ItemCode",
+                  "headerClassName": "oj-sm-only-hide",
+                  "className": "oj-sm-only-hide",
+                  "resizable": "enabled"},
+                  {"headerText": "Item Description", 
+                  "field": "ItemDescription",
+                  "resizable": "enabled"},
+                  {"headerText": "On Hand Quantity", 
+                  "field": "OnHandValue",
+                  "headerClassName": "oj-sm-only-hide",
+                  "className": "oj-sm-only-hide",
+                  "resizable": "enabled"},
+                  {"headerText": "Unit Of Measure", 
+                  "field": "UOM",
+                  "resizable": "enabled"}]'
+                  style='width: 100%; height: 400px;'>
         </oj-table>
-<!--          <oj-form-layout label-edge="{{labelEdge}}" max-columns="{{columns}}" direction="row">
-<oj-input-text id="filter" maxlength="30" placeholder="Type to filter" value="{{filter}}"></oj-input-text>
-<oj-input-text id="filter" maxlength="30" placeholder="Type to filter" value="{{filter}}"></oj-input-text>
-<oj-input-text id="filter" maxlength="30" placeholder="Type to filter" value="{{filter}}"></oj-input-text>
-<oj-input-text id="filter" maxlength="30" placeholder="Type to filter" value="{{filter}}"></oj-input-text>
-
-          </oj-form-layout>-->
-  </div>
+    </div>
 </div>
